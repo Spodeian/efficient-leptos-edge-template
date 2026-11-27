@@ -64,7 +64,7 @@ checksum = "2cb931c189b85683d69a5cfad41d4d418671e1ac413dd209f3f2fc31e3cfd902"
 name = "app"
 version = "0.1.0"
 dependencies = [
- "base64 0.23.1",
+ "base64",
  "js-sys",
  "leptos",
  "leptos_meta",
@@ -74,7 +74,6 @@ dependencies = [
  "serde_json",
  "shared",
  "spodeian-cache",
- "spodeian-export",
  "spodeian-leptos-ui",
  "spodeian-persist",
  "spodeian-telemetry",
@@ -162,7 +161,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "31b698c5f9a010f6573133b09e0de5408834d0c82f8d7475a89fc1867a71cd90"
 dependencies = [
  "axum-core",
- "base64 0.22.1",
+ "base64",
  "bytes",
  "form_urlencoded",
  "futures-util",
@@ -222,12 +221,6 @@ name = "base64"
 version = "0.22.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6"
-
-[[package]]
-name = "base64"
-version = "0.23.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ac07cdecf99051d9a5238b80f35af32cdeba5b336e55d957b318b50137e18da5"
 
 [[package]]
 name = "bit-set"
@@ -306,7 +299,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7969a9ba84b0ff843813e7249eed1678d9b6607ce5a3b8f0a47af3fcf7978e6e"
 dependencies = [
  "ahash",
- "base64 0.22.1",
+ "base64",
  "bitvec",
  "getrandom 0.2.17",
  "getrandom 0.3.4",
@@ -1310,7 +1303,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4b0f9f061ff585050a77e18b93a58d6c881c6785f473fc98924c4f77da50d891"
 dependencies = [
  "any_spawner",
- "base64 0.22.1",
+ "base64",
  "cfg-if",
  "either_of",
  "futures",
@@ -1510,7 +1503,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "202b2d1261c22d886f307934760a6bb566444f68f39b24f6f10defdc23633049"
 dependencies = [
  "any_spawner",
- "base64 0.22.1",
+ "base64",
  "codee",
  "futures",
  "hydration_context",
@@ -1628,15 +1621,6 @@ name = "miniz_oxide"
 version = "0.8.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1fa76a2c86f704bdb222d66965fb3d63269ce38518b83cb0575fca855ebb6316"
-dependencies = [
- "adler2",
-]
-
-[[package]]
-name = "miniz_oxide"
-version = "0.9.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b63fbc4a50860e98e7b2aa7804ded1db5cbc3aff9193adaff57a6931bf7c4b4c"
 dependencies = [
  "adler2",
 ]
@@ -2325,7 +2309,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "be8559dd05af1b5b7e363a150616589d5a88af5187273f7f331ba0dae8922812"
 dependencies = [
  "axum",
- "base64 0.22.1",
+ "base64",
  "bytes",
  "const-str",
  "const_format",
@@ -2418,10 +2402,9 @@ dependencies = [
 name = "shared"
 version = "0.1.0"
 dependencies = [
- "base64 0.23.1",
+ "base64",
  "bson",
  "criterion",
- "miniz_oxide 0.9.1",
  "proptest",
  "serde",
  "serde_json",
@@ -2487,7 +2470,7 @@ name = "spodeian-cache"
 version = "1.1.0"
 source = "git+https://github.com/Spodeian/spodeian-core?tag=v3.1.0#6704614ca800bf092216e9a49ff7b67aefd98c7e"
 dependencies = [
- "base64 0.22.1",
+ "base64",
  "js-sys",
  "serde",
  "serde_json",
@@ -2505,7 +2488,7 @@ version = "2.0.0"
 source = "git+https://github.com/Spodeian/spodeian-core?tag=v3.1.0#6704614ca800bf092216e9a49ff7b67aefd98c7e"
 dependencies = [
  "bson",
- "miniz_oxide 0.8.9",
+ "miniz_oxide",
  "serde",
  "serde_json",
  "thiserror 2.0.21",
@@ -2578,7 +2561,7 @@ name = "spodeian-web-utils"
 version = "1.1.0"
 source = "git+https://github.com/Spodeian/spodeian-core?tag=v3.1.0#6704614ca800bf092216e9a49ff7b67aefd98c7e"
 dependencies = [
- "base64 0.22.1",
+ "base64",
  "js-sys",
  "sha2",
  "tracing",

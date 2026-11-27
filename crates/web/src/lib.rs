@@ -1,6 +1,5 @@
 #![recursion_limit = "256"]
 #![warn(missing_docs)]
-#![warn(clippy::unwrap_used)]
 //! Browser WebAssembly hydration entrypoint for the pure serverless edge Leptos template.
 //!
 //! Pages are pre-rendered to static HTML by the `ssg` binary during build time; cargo-leptos's

@@ -15,6 +15,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - CI job `template-scaffold-check` runs `cargo generate` with defaults and with every option off, then builds and tests the result.
+- Lint policy lives in `[workspace.lints]` (`unsafe_code = "deny"`, `clippy::unwrap_used = "warn"`) with `clippy.toml` allowing unwraps in tests; `missing_docs` stays on each library crate root.
+- `escape_html` and the BSON import reuse `spodeian-export` instead of local copies.
+- `base64` pinned to 0.22 to match spodeian-core, so builds carry one copy; Dependabot skips its minor/major bumps.
+
+### Removed
+- Unused dependencies: direct `miniz_oxide`, and core crates no crate called.
 
 ## [0.1.0] - 2026-11-18
 

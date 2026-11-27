@@ -22,7 +22,6 @@ web-sys = { workspace = true }
 spodeian-cache = { workspace = true }
 spodeian-tokens = { workspace = true }
 spodeian-web-utils = { workspace = true }
-spodeian-export = { workspace = true }
 spodeian-telemetry = { workspace = true }
 spodeian-persist = { workspace = true }
 spodeian-leptos-ui = { workspace = true }
@@ -39,3 +38,6 @@ hydrate = ["leptos/hydrate"]
 
 [dev-dependencies]
 pollster = { workspace = true }
+
+[lints]
+workspace = true
