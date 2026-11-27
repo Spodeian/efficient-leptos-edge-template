@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+- `cargo generate` failed with "Substitution skipped, found invalid syntax" and created no files: workflows, `crates/shared/src/export.rs` and binary assets are now copied without Liquid substitution.
+- `CHANGELOG.md`, `CONTRIBUTING.md`, `Cargo.lock` and build output are no longer copied into generated projects (moved from `exclude` to `ignore`).
+- Generated projects take their own name in `wrangler.toml` and the `repository` URL instead of deploying over this template's Worker; this repo's own deploy passes `--name` from the repository name.
+- `scripts/build-web.sh` requires `_headers`, `_redirects`, `sw.js` and `manifest.json` only when the project ships them, so PWA- or Cloudflare-off projects build.
+
+### Changed
+- CI job `template-scaffold-check` runs `cargo generate` with defaults and with every option off, then builds and tests the result.
+
 ## [0.1.0] - 2026-11-18
 
 ### Added
